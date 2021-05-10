@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/server.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">server/</a> server.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/65</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.94% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.08% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/65</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</td><td class="line-coverage quiet"><span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var base64 = require('base-64');
+&nbsp;
+exports = {
+  events: [
+    { event: "onAppInstall", callback: "onAppInstallCallback" },
+    { event: "onAppUninstall", callback: "onAppUninstallCallback" },
+    { event: "onExternalEvent", callback: "onExternalEventCallback" }
+  ],
+  onAppInstallCallback: function (payload) {
+    console.log("Logging arguments from onAppInstallevent : " + JSON.stringify(payload));
+    generateTargetUrl()
+      .then(function (url) {
+        console.info("Generated Webhook URL : " + url);
+        renderData();
+        // let webhook_url = url
+&nbsp;
+        var headers = {
+          'Authorization': 'Bearer 795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667',
+          'Content-Type': 'application/json'
+        };
+        var options = { headers: headers };
+        options["body"] = JSON.stringify({
+          "name": "feshdesk register",
+          "event": "order.created",
+          "url": "https://hooks4.freshworks.com/dvuJiyGlPRcI4AjfekO7OHAXJ002TfeiaDyXr3UWnZG9yXMwToaTsUYiGWt8pFKL",
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667"
+            }, {
+              "key": "Accept-Language",
+              "value": "AR"
+            }
+          ]
+        })
+        console.log(options, "options")
+        $request.post(`https://api.salla.dev/admin/v2/webhooks/subscribe`, options)
+          .then(function (data) {
+            console.log(data.response, "webhook register success")
+            let detail = JSON.parse(data.response)
+            console.log(typeof (detail), "detail")
+            console.log(detail.data.id, "parse data")
+            // let id = {}
+            // id.u_id = detail.data.id
+            // console.log(id.u_id,"id.u_id")
+            let obj = { "webhookURL": "https://hooks4.freshworks.com/dvuJiyGlPRcI4AjfekO7OHAXJ002TfeiaDyXr3UWnZG9yXMwToaTsUYiGWt8pFKL" }
+            $db.set("webhookURL", obj).then(
+              function (datas) {
+<span class="cstat-no" title="statement not covered" >                console.log(datas, "datas")</span>
+                // success operation
+                // "data" value is { "Created" : true }
+              },
+              function (error) <span class="fstat-no" title="function not covered" >{</span>
+                // failure operation
+<span class="cstat-no" title="statement not covered" >                console.log(error, "errorsssss")</span>
+              });
+          },
+            function (error) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >              console.log("error")</span>
+<span class="cstat-no" title="statement not covered" >              console.log(error)</span>
+            })
+      })
+      .fail(function (err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error(err);</span>
+<span class="cstat-no" title="statement not covered" >        renderData({ message: "Generating Webhook URL failed" });</span>
+      });
+  },
+&nbsp;
+  onExternalEventCallback: function (payload) {
+    console.log("Logging arguments from onExternalEvent: " + JSON.stringify(payload));
+    let domain_name = payload.iparams.domainName
+    //let apikey = payload.iparams.apiKey
+    console.log(domain_name)
+    console.log("payload",payload.data)
+    console.log("customer",payload.data.customer)
+    console.log("customer.email",payload.data.customer.email)
+    console.log("mobile",payload.data.customer.mobile)
+    var mobilenumber = payload.data.customer.mobile
+    var name = <span class="cstat-no" title="statement not covered" >payload.data.customer.first_name;</span>
+    //let c_id = payload.data.customer.id
+    let email = <span class="cstat-no" title="statement not covered" >payload.data.customer.email</span>
+    console.log("name",name,"email",email)
+    var headers = {
+      "Authorization": `Basic ${base64.encode(payload.iparams.apiKey)}`,
+      'Content-Type': 'application/json'
+    };
+    var options = { headers: headers };
+    
+    var urls = <span class="cstat-no" title="statement not covered" >`https://${domain_name}.freshdesk.com/api/v2/search/contacts?query="email:'${email}'"`</span>
+<span class="cstat-no" title="statement not covered" >    console.log("urls",urls)</span>
+<span class="cstat-no" title="statement not covered" >    $request.get(urls, options).then(function (data) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log("data",JSON.parse(data.response))</span>
+      let total = <span class="cstat-no" title="statement not covered" >JSON.parse(data.response).total</span>
+<span class="cstat-no" title="statement not covered" >      if(total == 0){</span>
+<span class="cstat-no" title="statement not covered" >        console.log("empty con")</span>
+<span class="cstat-no" title="statement not covered" >        options["body"] = JSON.stringify({</span>
+          "name": name,
+          "email": email,
+          "mobile":mobilenumber
+        })
+<span class="cstat-no" title="statement not covered" >        options.method = "POST"</span>
+<span class="cstat-no" title="statement not covered" >        console.log("contact")</span>
+<span class="cstat-no" title="statement not covered" >        console.log(options,"options")</span>
+<span class="cstat-no" title="statement not covered" >        $request.post(`https://${domain_name}.freshdesk.com/api/v2/contacts`, options)</span>
+          .then(function (data) {
+<span class="cstat-no" title="statement not covered" >            console.log("contact created",data)</span>
+          },
+          function(e){
+<span class="cstat-no" title="statement not covered" >            console.log("error in contact creation",e)</span>
+          })
+      }else{
+<span class="cstat-no" title="statement not covered" >        console.log("some data here")</span>
+      }
+    },function(e)<span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      console.log(e,"errror in search api")</span>
+    }
+    )
+    //contct search
+&nbsp;
+  },
+&nbsp;
+  onAppUninstallCallback: function (payload) {
+<span class="cstat-no" title="statement not covered" >    console.log(payload, "payload")</span>
+<span class="cstat-no" title="statement not covered" >    $db.get("webhookURL").then(data=&gt;<span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      console.log("data",data.webhookURL)</span>
+    var headers = <span class="cstat-no" title="statement not covered" >{</span>
+      'Authorization': 'Bearer 795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667',
+      'Content-Type': 'application/json'
+    };
+    var options = <span class="cstat-no" title="statement not covered" >{ headers: headers };</span>
+<span class="cstat-no" title="statement not covered" >    options["body"] = JSON.stringify({</span>
+      "url": data.webhookURL,
+      "headers": [
+        {
+          "key": "Authorization",
+          "value": "795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667"
+        }
+      ]
+    })
+<span class="cstat-no" title="statement not covered" >    $request.delete(`https://api.salla.dev/admin/v2/webhooks/unsubscribe`, options)</span>
+    .then(function (data) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      console.log(data.response, "webhook deleted success")</span>
+    },
+      function (error) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.log("error")</span>
+<span class="cstat-no" title="statement not covered" >        console.log(error)</span>
+      })
+    },
+    function(e)<span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      console.log("error",e)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    console.log("Logging arguments from onAppUninstall event: " + JSON.stringify(payload));</span>
+<span class="cstat-no" title="statement not covered" >    renderData();</span>
+&nbsp;
+  }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 07 2021 12:55:07 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
