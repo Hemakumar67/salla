@@ -15,7 +15,7 @@ exports = {
         // let webhook_url = url
 
         var headers = {
-          'Authorization': 'Bearer 795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667',
+          'Authorization': 'Bearer enter salla api',
           'Content-Type': 'application/json'
         };
         var options = { headers: headers };
@@ -26,7 +26,7 @@ exports = {
           "headers": [
             {
               "key": "Authorization",
-              "value": "795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667"
+              "value": "enter salla api"
             }, {
               "key": "Accept-Language",
               "value": "AR"
@@ -149,7 +149,7 @@ exports = {
     $db.get("webhookURL").then(data => {
       console.log("data", data.webhookURL)
       var headers = {
-        'Authorization': 'Bearer 795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667',
+        'Authorization': 'Bearer enter salla api',
         'Content-Type': 'application/json'
       };
       var options = { headers: headers };
@@ -158,7 +158,7 @@ exports = {
         "headers": [
           {
             "key": "Authorization",
-            "value": "795c1c1fec9a48ab8f3caaa18074eccbd5eeba8f5fb4a3bdd384f7083e1d1776ea6c49d667"
+            "value": "enter salla api"
           }
         ]
       })
